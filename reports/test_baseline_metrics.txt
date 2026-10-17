@@ -1,0 +1,26 @@
+BASELINE MODEL METRICS  (threshold = 0.50)
+==========================================
+  ROC-AUC            : 1.0000
+  PR-AUC             : 1.0000
+  Matthews CC        : 1.0000
+  Brier Score        : 0.0000  (lower = better; 0 = perfect)
+
+  Precision          : 1.0000   (0 false positives)
+  Recall             : 1.0000   (0 false negatives)
+  F1 Score           : 1.0000
+  False Positive Rate: 0.0000
+  False Negative Rate: 0.0000
+
+Confusion Matrix (rows=Actual, cols=Predicted)
+  TN=2940  FP=0
+  FN=0   TP=60
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       Legit       1.00      1.00      1.00      2940
+       Fraud       1.00      1.00      1.00        60
+
+    accuracy                           1.00      3000
+   macro avg       1.00      1.00      1.00      3000
+weighted avg       1.00      1.00      1.00      3000

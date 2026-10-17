@@ -1,0 +1,24 @@
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# macOS files
+.DS_Store
+
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local transaction data and generated outputs
+data/
+models/
+reports/flagged_transactions.csv
+reports/ai_narratives.csv
+
+# Reports pending privacy review
+reports/*.html

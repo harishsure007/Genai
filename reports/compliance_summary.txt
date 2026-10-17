@@ -1,0 +1,65 @@
+FRAUD DETECTION COMPLIANCE SUMMARY
+====================================
+Generated   : 2026-04-22 20:39:11
+Thresholds  : HIGH ≥ 70%  |  MEDIUM ≥ 40%
+
+BATCH OVERVIEW
+--------------
+  Total transactions reviewed   :     10,000
+  Known fraud labels (ground truth):      200
+
+FLAGGED ACTIVITY
+-----------------
+  Total flagged                 :        200  (2.00% of batch)
+    └─ HIGH risk                :        200  (2.00%)
+    └─ MEDIUM risk              :          0  (0.00%)
+
+FINANCIAL EXPOSURE
+-------------------
+  Avg transaction amount (all)     : $     74.81
+  Avg transaction amount (flagged) : $    445.78
+  Total value at risk (flagged)    : $   89,156.94
+  Total value at risk (HIGH only)  : $   89,156.94
+
+TOP FLAGGED MERCHANT CATEGORIES
+---------------------------------
+      healthcare                   29
+      electronics                  27
+      fuel                         26
+      travel                       22
+      entertainment                22
+
+TOP FLAGGED COUNTRIES
+----------------------
+      NG                           59
+      CN                           43
+      BR                           38
+      DE                           15
+      CA                           12
+
+TOP FLAGGED CARD TYPES
+-----------------------
+      prepaid                     122
+      debit                        43
+      credit                       35
+
+RECOMMENDED ACTIONS
+--------------------
+  1. HIGH-risk transactions (200): Escalate for immediate manual review
+     or automated block. Priority queue for compliance officer sign-off.
+
+  2. MEDIUM-risk transactions (0): Add to enhanced due-diligence
+     watch list. Apply step-up authentication or hold for 24 h review.
+
+  3. Re-evaluate thresholds quarterly against confirmed fraud case outcomes
+     to re-calibrate precision/recall balance.
+
+  4. For transactions flagged as HIGH but cleared post-review, retain a
+     labelled feedback dataset for model retraining.
+
+OUTPUT FILES
+-------------
+  Flagged detail CSV  : reports/flagged_transactions.csv
+  Risk distribution   : reports/risk_score_distribution.png
+  By merchant         : reports/flagged_by_category.png
+  By country          : reports/flagged_by_country.png
